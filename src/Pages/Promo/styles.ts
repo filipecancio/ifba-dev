@@ -56,6 +56,7 @@ export const Botao = styled.a`
     border: #E0692B solid 3px;
     color: #02165D;
     font-family: 'Boogaloo';
+    cursor: pointer;
 `;
 
 export const SubSection = styled.div`
