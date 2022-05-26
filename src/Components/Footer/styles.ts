@@ -5,6 +5,8 @@ export const Container = styled.div`
     background-color: #E5E7EA;
     width: 100%;
     padding: 30px;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
 `;
 export const SubContainer = styled.div`
@@ -18,6 +20,7 @@ export const Links = styled.a`
 
 export const Image = styled.img`
     width: fit-content;
-    height: 60px;
+    transition: 1s;
+    max-height: 60px;
     margin: 20px;
 `;
