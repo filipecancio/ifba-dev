@@ -57,3 +57,46 @@ export const Botao = styled.a`
     color: #02165D;
     font-family: 'Boogaloo';
 `;
+
+export const SubSection = styled.div`
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Title = styled.p`
+    width: 100%;
+    transition: 1s;
+    font-family: 'Boogaloo';
+    font-size: 30px;
+    color: #F4BA15;
+    margin-bottom: 10px;
+`;
+export const Item = styled.p`
+    width: 100%;
+    transition: 1s;
+    font-family: 'Boogaloo';
+    font-size: 16px;
+    color: #F4BA15;
+    margin: 5px;
+`;
+export const H1 = styled.p`
+    width: 100%;
+    transition: 1s;
+    font-family: 'Boogaloo';
+    font-size: 40px;
+    color: #F4BA15;
+    margin: 5px;
+`;
+export const P1 = styled.p`
+    width: 100%;
+    transition: 1s;
+    font-family: 'Boogaloo';
+    font-size: 16px;
+    color: #F4BA15;
+    margin: 5px;
+`;
