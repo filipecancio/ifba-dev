@@ -22,7 +22,7 @@ export const Content = styled.div`
 `;
 
 export const Section01 = styled.div`
-    margin-top: 100px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -30,9 +30,14 @@ export const Section01 = styled.div`
     justify-content: center;
 `;
 
-
 export const Image = styled.img`
     width: fit-content;
     max-height: 80px;
+    margin: 20px;
+`;
+
+export const Preco = styled.img`
+    width: fit-content;
+    max-width: 250px;
     margin: 20px;
 `;
