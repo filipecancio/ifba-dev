@@ -1,13 +1,33 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Header from '../../Components/Header';
-import { Container, Content, Section01, Image, Preco, Botao, SubSection, Title, Item,H1, P1 } from './styles';
+import { Container, Content, Section01, Image, Preco, Botao, SubSection, Title, Item, H1, P1 } from './styles';
 import image01 from '../../util/frame01.png';
 import image02 from '../../util/frame02.png';
 import image03 from '../../util/frame03.png';
 import preco from '../../util/preco.png';
+import Contact from '../../Components/Contact';
+
 
 const Index: React.FC = () => {
+      const eletrica = [
+            { name: "Luciane Santos", ddd: "77", first: "99828", second: "7014" },
+            { name: "Estefani Montenegro", ddd: "74", first: "99944", second: "0759" },
+            { name: "Laiza Costa", ddd: "77", first: "98115", second: "6154" },
+            { name: "Jonas Souza", ddd: "77", first: "99807", second: "7522" },
+            { name: "Mikelly Bonfim", ddd: "77", first: "99936", second: "0410" }
+      ]
+      const ambiental = [
+            { name: "Paulina Meira", ddd: "77", first: "98805", second: "0559" },
+            { name: "Brunna Justo", ddd: "77", first: "99866", second: "6939" },
+            { name: "Isabela Freire", ddd: "77", first: "98102", second: "5803" },
+            { name: "Matheus Gusmão", ddd: "77", first: "98855", second: "4053" }]
+      const bsi = [
+            { name: "Arthur Lemos", ddd: "77", first: "98157", second: "0051" },
+            { name: "Flávio Filipe", ddd: "77", first: "99811", second: "5173" },
+            { name: "Gabriel Oliveira", ddd: "77", first: "8851", second: "0051" }
+      ]
+
       return (
             <Container>
                   <Content>
@@ -30,24 +50,15 @@ const Index: React.FC = () => {
                         <Section01>
                               <SubSection>
                                     <Title>ELÉTRICA</Title>
-                                    <Item>Luciane Santos: (77) 99828-7014</Item>
-                                    <Item>Estefani Montenegro: (74) 99944-0759</Item>
-                                    <Item>Laiza Costa: (77) 98115-6154</Item>
-                                    <Item>Jonas Souza: (77) 99807-7522</Item>
-                                    <Item>Mikelly Bonfim: (77) 99936-0410</Item>
+                                    {eletrica.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
                               </SubSection>
                               <SubSection>
                                     <Title>AMBIENTAL</Title>
-                                    <Item>Paulina Meira: (77) 98805-0559</Item>
-                                    <Item>Brunna Justo: (77) 99866-6939</Item>
-                                    <Item>Isabela Freire: (77) 98102-5803</Item>
-                                    <Item>Matheus Gusmão: (77) 98855-4053</Item>
+                                    {ambiental.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
                               </SubSection>
                               <SubSection>
                                     <Title>BSI</Title>
-                                    <Item>Arthur Lemos: (77) 98157-0051</Item>
-                                    <Item>Flávio Filipe: (77) 99811-5173</Item>
-                                    <Item>Gabriel Oliveira: (77)98851-0051</Item>
+                                    {bsi.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
                               </SubSection>
 
 

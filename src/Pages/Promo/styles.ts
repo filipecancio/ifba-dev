@@ -72,6 +72,7 @@ export const SubSection = styled.div`
 export const Title = styled.p`
     width: 100%;
     transition: 1s;
+    text-align: center;
     font-family: 'Boogaloo';
     font-size: 30px;
     color: #F4BA15;
@@ -91,7 +92,7 @@ export const H1 = styled.p`
     font-family: 'Boogaloo';
     font-size: 40px;
     color: #F4BA15;
-    margin: 5px;
+    margin: 5px 20px;
 `;
 export const P1 = styled.p`
     width: 100%;
@@ -99,5 +100,5 @@ export const P1 = styled.p`
     font-family: 'Boogaloo';
     font-size: 16px;
     color: #F4BA15;
-    margin: 5px;
+    margin: 5px 20px;
 `;
