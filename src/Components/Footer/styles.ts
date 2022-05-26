@@ -15,7 +15,9 @@ export const SubContainer = styled.div`
     align-items: center;
 `;
 
-export const Links = styled.a`
+export const Ground = styled.img`
+    width: 100%;
+    height: fit-content;
 `;
 
 export const Image = styled.img`
