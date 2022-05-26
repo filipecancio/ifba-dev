@@ -1,12 +1,17 @@
 import React from 'react';
-import {Container} from './styles';
+import Footer from '../../Components/Footer';
+import Header from '../../Components/Header';
+import { Container, Content } from './styles';
 
 const Index: React.FC = () => {
       return (
             <Container>
-            <div> </div>
+                  <Content>
+                        <Header />
+                        <Footer />
+                  </Content>
             </Container>
       );
-    }
+}
 
 export default Index;
