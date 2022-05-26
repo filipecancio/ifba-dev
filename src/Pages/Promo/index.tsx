@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Header from '../../Components/Header';
-import { Container, Content,Section01,Image,Preco } from './styles';
+import { Container, Content,Section01,Image,Preco, Botao } from './styles';
 import image01 from '../../util/frame01.png';
 import image02 from '../../util/frame02.png';
 import image03 from '../../util/frame03.png';
@@ -14,6 +14,9 @@ const Index: React.FC = () => {
                         <Header />
                         <Section01>
                         <Preco src={preco}/>
+                        <Botao>
+                              Comprar ingresso
+                        </Botao>
                         </Section01>
                         <Section01>
                               <Image src={image01}/>

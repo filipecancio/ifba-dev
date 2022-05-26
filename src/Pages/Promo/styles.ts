@@ -28,6 +28,7 @@ export const Section01 = styled.div`
     flex-wrap: wrap;
     transition: 1s;
     justify-content: center;
+    align-items: center;
 `;
 
 export const Image = styled.img`
@@ -40,4 +41,19 @@ export const Preco = styled.img`
     width: fit-content;
     max-width: 250px;
     margin: 20px;
+`;
+
+export const Botao = styled.a`
+    width: fit-content;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    background-color: #F4BA15;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: #E0692B solid 3px;
+    color: #02165D;
+    font-family: 'Boogaloo';
 `;
