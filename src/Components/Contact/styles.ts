@@ -7,4 +7,9 @@ font-family: 'Boogaloo';
 font-size: 16px;
 color: #F4BA15;
 margin: 5px;
+
+ b{ 
+    font-family: 'Boogaloo';
+    color: #E0692B;
+ }
 `;

@@ -12,7 +12,7 @@ const Index: React.FC<Props> = props => {
     return (
         <>
         <a href={`https://api.whatsapp.com/send?phone=55${props.ddd}${props.first}${props.second}&text=Ol%C3%A1!%20gostaria%20de%20comprar%20um%20ingresso%20para%20a%20festa%20de%20jo%22ao%20do%20IFBA`} target="_blank" rel="noopener noreferrer">
-            <Container>{props.name}: ({props.ddd}) {props.first}-{props.second}</Container>
+            <Container>{props.name}: <b> ({props.ddd}) {props.first}-{props.second}</b> </Container>
         </a>
         </>
     );
