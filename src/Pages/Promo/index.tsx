@@ -7,6 +7,7 @@ import image02 from '../../util/frame02.png';
 import image03 from '../../util/frame03.png';
 import preco from '../../util/preco.png';
 import Contact from '../../Components/Contact';
+import data from '../../util/data.json';
 
 
 const Index: React.FC = () => {
@@ -25,7 +26,7 @@ const Index: React.FC = () => {
       const bsi = [
             { name: "Arthur Lemos", ddd: "77", first: "98157", second: "0051" },
             { name: "Flávio Filipe", ddd: "77", first: "99811", second: "5173" },
-            { name: "Gabriel Oliveira", ddd: "77", first: "8851", second: "0051" }
+            { name: "Gabriel Oliveira", ddd: "77", first: "8851", second: "6200" }
       ]
 
       return (
@@ -50,15 +51,15 @@ const Index: React.FC = () => {
                         <Section01>
                               <SubSection>
                                     <Title>ELÉTRICA</Title>
-                                    {eletrica.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
+                                    {data.eletrica.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
                               </SubSection>
                               <SubSection>
                                     <Title>AMBIENTAL</Title>
-                                    {ambiental.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
+                                    {data.ambiental.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
                               </SubSection>
                               <SubSection>
                                     <Title>BSI</Title>
-                                    {bsi.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
+                                    {data.bsi.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
                               </SubSection>
 
 
