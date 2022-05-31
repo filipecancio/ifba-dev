@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../../Components/Footer';
 import Header from '../../Components/Header';
-import { Container, Content, Section01, Image, Preco, Botao, SubSection, Title, Item, H1, P1 } from './styles';
+import { Container, Content, Section01, Image, Preco, Botao, SubSection, Title, H1, P1 } from './styles';
 import image01 from '../../util/frame01.png';
 import image02 from '../../util/frame02.png';
 import image03 from '../../util/frame03.png';
 import preco from '../../util/preco.png';
 import Contact from '../../Components/Contact';
-import data from '../../util/data.json';
 import { api } from '../../services/api';
 
-interface Contact {
+interface Person {
       name: string;
       code: string;
       first: string;
@@ -18,9 +17,9 @@ interface Contact {
       ddd: string;
 }
 interface Contacts {
-      ambiental: Contact[];
-      bsi: Contact[];
-      eletrica: Contact[];
+      ambiental: Person[];
+      bsi: Person[];
+      eletrica: Person[];
 }
 
 const Index: React.FC = () => {
