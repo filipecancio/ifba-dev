@@ -11,23 +11,6 @@ import data from '../../util/data.json';
 
 
 const Index: React.FC = () => {
-      const eletrica = [
-            { name: "Luciane Santos", ddd: "77", first: "99828", second: "7014" },
-            { name: "Estefani Montenegro", ddd: "74", first: "99944", second: "0759" },
-            { name: "Laiza Costa", ddd: "77", first: "98115", second: "6154" },
-            { name: "Jonas Souza", ddd: "77", first: "99807", second: "7522" },
-            { name: "Mikelly Bonfim", ddd: "77", first: "99936", second: "0410" }
-      ]
-      const ambiental = [
-            { name: "Paulina Meira", ddd: "77", first: "98805", second: "0559" },
-            { name: "Brunna Justo", ddd: "77", first: "99866", second: "6939" },
-            { name: "Isabela Freire", ddd: "77", first: "98102", second: "5803" },
-            { name: "Matheus Gusmão", ddd: "77", first: "98855", second: "4053" }]
-      const bsi = [
-            { name: "Arthur Lemos", ddd: "77", first: "98157", second: "0051" },
-            { name: "Flávio Filipe", ddd: "77", first: "99811", second: "5173" },
-            { name: "Gabriel Oliveira", ddd: "77", first: "8851", second: "6200" }
-      ]
 
       return (
             <Container>
