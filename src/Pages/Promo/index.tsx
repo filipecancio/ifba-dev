@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../Components/Footer';
 import Header from '../../Components/Header';
 import { Container, Content, Section01, Image, Preco, Botao, SubSection, Title, Item, H1, P1 } from './styles';
@@ -8,9 +8,31 @@ import image03 from '../../util/frame03.png';
 import preco from '../../util/preco.png';
 import Contact from '../../Components/Contact';
 import data from '../../util/data.json';
+import { api } from '../../services/api';
 
+interface Contact {
+      name: string;
+      code: string;
+      first: string;
+      second: string;
+      ddd: string;
+}
+interface Contacts {
+      ambiental: Contact[];
+      bsi: Contact[];
+      eletrica: Contact[];
+}
 
 const Index: React.FC = () => {
+
+      const [contacts, setContacts] = useState<Contacts>({ambiental:[],bsi:[],eletrica:[]});
+
+      useEffect(() => {
+            (async () => {
+              const { data } = await api.get<Contacts>('getContacts');
+              setContacts(data);
+            })();
+          }, []);
 
       return (
             <Container>
@@ -34,15 +56,15 @@ const Index: React.FC = () => {
                         <Section01>
                               <SubSection>
                                     <Title>ELÉTRICA</Title>
-                                    {data.eletrica.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
+                                    {contacts.eletrica.map((item) => <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second} />)}
                               </SubSection>
                               <SubSection>
                                     <Title>AMBIENTAL</Title>
-                                    {data.ambiental.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
+                                    {contacts.ambiental.map((item) => <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second} />)}
                               </SubSection>
                               <SubSection>
                                     <Title>BSI</Title>
-                                    {data.bsi.map((item)=> <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second}/>)}
+                                    {contacts.bsi.map((item) => <Contact name={item.name} ddd={item.ddd} first={item.first} second={item.second} />)}
                               </SubSection>
 
 

@@ -1,5 +1,16 @@
 const functions = require("firebase-functions");
 const admin = require('firebase-admin');
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+app.use(cors({ origin: true }));
+
+app.get('/', async (req, res) => {
+    const snapshot = await admin.database().ref('/phones').get();
+        const snap = snapshot.val();
+        res.send(snap);
+});
 
 
 admin.initializeApp();
@@ -9,11 +20,7 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
     response.send("Hello from Firebase!");
 });
 
-exports.getContacts = functions.https.onRequest(async (req, res) => {
-    const snapshot = await admin.database().ref('/phones').get();
-    const snap = snapshot.val();
-    res.send(snap);
-});
+exports.getContacts = functions.https.onRequest(app);
 
 exports.getCurses = functions.https.onRequest(async (req, res) => {
     const snapshot = await admin.database().ref('/phones').get();
@@ -53,7 +60,7 @@ exports.updateCode = functions.https.onRequest(async (req, res) => {
     });
     const index = temp.filter(e => e != null)[0]
 
-    if(index != null){
+    if (index != null) {
         const newReference = `/phones/${curse}/${index}/code`
         const newSnapshot = await admin.database().ref(newReference).set(code);
         //const newSnap = newSnapshot.val();
@@ -78,14 +85,14 @@ exports.setQrcode = functions.database.ref('phones/{curse}/{name}').onCreate((sn
     const info = value.filter(e => e != null);
     console.log(info);
 
-    if(info<=0){
+    if (info <= 0) {
         return snapshot.ref.parent.child(`${curse}/${info}/qrcodeurl`).set(qrcodeurl);
-    }else{
+    } else {
         return `Nenhuma referência de ${name} foi encontrada. Tente novamente.`;
     }
 
 
 
-return info; //snapshot.ref.parent.child('uppercase').set(uppercase);
+    return info; //snapshot.ref.parent.child('uppercase').set(uppercase);
 
 })
