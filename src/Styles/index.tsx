@@ -1,18 +1,14 @@
-import React from 'react';
-import Colors from './Colors';
-import Reset from './Reset';
+import React from "react";
+import Colors from "./Colors";
+import Reset from "./Reset";
 
-export interface Props {
-  dark?: Boolean | null;
-}
-
-const Index: React.FC<Props> = props => {
-      return (
-        <>
-         <Reset/>
-         <Colors/>
-        </>
-      );
-    }
+const Index: React.FC = () => {
+  return (
+    <>
+      <Reset />
+      <Colors />
+    </>
+  );
+};
 
 export default Index;

@@ -1,9 +1,9 @@
-export const size = {
-    large: '1279px',
-    desktop: '1279px',
-    tablet: '767px',
-    mobile: '479px',
-    small: '325px',
+export enum size {
+    large = '1279px',
+    desktop = '1279px',
+    tablet = '767px',
+    mobile = '479px',
+    small = '325px',
   }
   
 export const desktop = {
